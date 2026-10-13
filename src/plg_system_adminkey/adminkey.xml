@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_ADMINKEY</name>
+    <author>JOD</author>
+    <authorEmail>oleksiy.degtyar@gmail.com</authorEmail>
+    <authorUrl>https://github.com/jackal-kr/adminkey</authorUrl>
+    <creationDate>2026-10-13</creationDate>
+    <copyright>Copyright (C) 2026 JOD. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <version>1.0.2</version>
+    <description>PLG_SYSTEM_ADMINKEY_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="adminkey">adminkey.php</filename>
+        <filename>LICENSE.txt</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/plg_system_adminkey.ini</language>
+        <language tag="en-GB">language/en-GB/plg_system_adminkey.sys.ini</language>
+        <language tag="pl-PL">language/pl-PL/plg_system_adminkey.ini</language>
+        <language tag="pl-PL">language/pl-PL/plg_system_adminkey.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+                <!-- ── Usage instructions note ──────────────────────── -->
+                <field name="usage_note"
+                       type="note"
+                       label="PLG_SYSTEM_ADMINKEY_USAGE_LABEL"
+                       description="PLG_SYSTEM_ADMINKEY_USAGE_DESC"
+                       class="alert alert-info"/>
+
+                <!-- ── Secret key ───────────────────────────────────── -->
+                <field name="secret_key"
+                       type="text"
+                       label="PLG_SYSTEM_ADMINKEY_KEY_LABEL"
+                       description="PLG_SYSTEM_ADMINKEY_KEY_DESC"
+                       default=""
+                       filter="string"
+                       hint="PLG_SYSTEM_ADMINKEY_KEY_HINT"/>
+
+                <!-- ── Redirect URL ──────────────────────────────────── -->
+                <field name="redirect_url"
+                       type="url"
+                       label="PLG_SYSTEM_ADMINKEY_REDIRECT_LABEL"
+                       description="PLG_SYSTEM_ADMINKEY_REDIRECT_DESC"
+                       default=""
+                       filter="url"
+                       hint="PLG_SYSTEM_ADMINKEY_REDIRECT_HINT"/>
+
+            </fieldset>
+        </fields>
+    </config>
+    <updateservers>
+        <server type="extension" name="Admin Secret Key Update Site">https://raw.githubusercontent.com/jackal-kr/adminkey/main/updates/adminkey.xml</server>
+    </updateservers>
+</extension>

@@ -1,4 +1,4 @@
-# Admin Secret Key (`plg_system_adminkey`)
+# Admin Secret Key - `plg_system_adminkey`
 
 A tiny Joomla 4 / 5 / 6 system plugin that hides the administrator login behind a secret word.
 Visiting `/administrator/` without the key redirects to your homepage (or a URL you choose).
